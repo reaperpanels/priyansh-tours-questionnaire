@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PriyanshTours.com Client Questionnaire</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ensure proper initial visibility */
+        #questionnaireForm { display: block; }
+        #loadingOverlay, #successMessage { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Client Questionnaire: PriyanshTours.com</h1>
+            <p class="header-desc">Please select the best option for each question to help us build your new tourism website.</p>
+        </header>
+
+        <form id="questionnaireForm">
+            <section class="form-section">
+                <h2>Section 1: Core Website Purpose & Goals</h2>
+                
+                <div class="question">
+                    <h3>What is the SINGLE MOST IMPORTANT goal for your new website?</h3>
+                    <div class="options">
+                        <label><input type="radio" name="website_goal" value="increase_bookings" required> (a) Directly increase online tour bookings.</label>
+                        <label><input type="radio" name="website_goal" value="generate_leads"> (b) Generate leads/inquiries for custom or specialized tours.</label>
+                        <label><input type="radio" name="website_goal" value="brand_identity"> (c) Establish a strong brand identity for "Priyansh Tours".</label>
+                        <label><input type="radio" name="website_goal" value="information_hub"> (d) Serve as a primary information hub for your tour offerings.</label>
+                        <label>
+                            <input type="radio" name="website_goal" value="other"> (e) Other (please specify):
+                            <input type="text" name="website_goal_other" class="other-input">
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>What is the primary unique selling point (USP) of "Priyansh Tours"?</h3>
+                    <div class="options">
+                        <label><input type="radio" name="usp" value="unique_destinations" required> (a) Focus on specific, unique destinations or experiences.</label>
+                        <label><input type="radio" name="usp" value="expertise"> (b) Expertise in a particular type of travel (e.g., adventure, eco-tourism, cultural).</label>
+                        <label><input type="radio" name="usp" value="personalized"> (c) Highly personalized service and attention to detail.</label>
+                        <label><input type="radio" name="usp" value="best_value"> (d) Offering the best value or competitive pricing.</label>
+                        <label><input type="radio" name="usp" value="local_knowledge"> (e) Exceptional local knowledge and experienced guides.</label>
+                        <label>
+                            <input type="radio" name="usp" value="other"> (f) Other (please specify):
+                            <input type="text" name="usp_other" class="other-input">
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Section 2: Target Audience & Tour Offerings</h2>
+                
+                <div class="question">
+                    <h3>Who is your primary target audience for priyanshtours.com?</h3>
+                    <div class="options">
+                        <label><input type="radio" name="target_audience" value="international" required> (a) Mainly International Tourists</label>
+                        <label><input type="radio" name="target_audience" value="domestic"> (b) Mainly Domestic Indian Tourists</label>
+                        <label><input type="radio" name="target_audience" value="balanced"> (c) A balanced mix of International and Domestic</label>
+                        <label>
+                            <input type="radio" name="target_audience" value="specific"> (d) A specific demographic or interest group:
+                            <input type="text" name="target_audience_specific" class="other-input">
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Which age groups are you primarily targeting with your tours?</h3>
+                    <div class="options">
+                        <label><input type="checkbox" name="age_groups" value="young_adults"> (a) Young Adults / Millennials (18-35)</label>
+                        <label><input type="checkbox" name="age_groups" value="adults"> (b) Adults (36-55)</label>
+                        <label><input type="checkbox" name="age_groups" value="seniors"> (c) Seniors (55+)</label>
+                        <label><input type="checkbox" name="age_groups" value="families"> (d) Families with children</label>
+                        <label><input type="checkbox" name="age_groups" value="all"> (e) We cater to all age groups with diverse offerings.</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>What is the general budget level your tours cater to?</h3>
+                    <div class="options">
+                        <label><input type="radio" name="budget_level" value="budget" required> (a) Budget-Friendly / Economy</label>
+                        <label><input type="radio" name="budget_level" value="mid_range"> (b) Mid-Range / Good Value</label>
+                        <label><input type="radio" name="budget_level" value="premium"> (c) Premium / Luxury</label>
+                        <label><input type="radio" name="budget_level" value="multiple"> (d) We offer options across multiple budget levels.</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>What are the main categories or themes of tours "Priyansh Tours" will offer?</h3>
+                    <p class="subtext">Select top 3-5</p>
+                    <div class="options">
+                        <label><input type="checkbox" name="tour_types" value="adventure"> (a) Adventure & Outdoor (trekking, watersports, etc.)</label>
+                        <label><input type="checkbox" name="tour_types" value="cultural"> (b) Cultural Immersion & Heritage Sites</label>
+                        <label><input type="checkbox" name="tour_types" value="spiritual"> (c) Spiritual Journeys & Wellness Retreats</label>
+                        <label><input type="checkbox" name="tour_types" value="wildlife"> (d) Wildlife Safaris & Nature Exploration</label>
+                        <label><input type="checkbox" name="tour_types" value="leisure"> (e) Leisure & Relaxation (beaches, hill stations)</label>
+                        <label><input type="checkbox" name="tour_types" value="family"> (f) Family-Oriented Packages</label>
+                        <label><input type="checkbox" name="tour_types" value="educational"> (g) Educational or Special Interest Tours</label>
+                        <label><input type="checkbox" name="tour_types" value="offbeat"> (h) Offbeat & Unexplored Destinations</label>
+                        <label>
+                            <input type="checkbox" name="tour_types" value="other"> (i) Other:
+                            <input type="text" name="tour_types_other" class="other-input">
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>How would you describe the level of detail for your typical tour itineraries on the website?</h3>
+                    <div class="options">
+                        <label><input type="radio" name="itinerary_detail" value="highly_detailed" required> (a) Highly detailed (e.g., day-by-day, specific timings).</label>
+                        <label><input type="radio" name="itinerary_detail" value="moderately_detailed"> (b) Moderately detailed (key activities and highlights per day).</label>
+                        <label><input type="radio" name="itinerary_detail" value="general_overview"> (c) General overview (main destinations, allowing for flexibility).</label>
+                        <label><input type="radio" name="itinerary_detail" value="varies"> (d) This will vary significantly from tour to tour.</label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Section 3: Essential Website Functionality</h2>
+                
+                <div class="question">
+                    <h3>Online Booking System Preference:</h3>
+                    <div class="options">
+                        <label><input type="radio" name="booking_system" value="full_online" required> (a) Full online booking with payment integration for most tours.</label>
+                        <label><input type="radio" name="booking_system" value="inquiry_based"> (b) Primarily an inquiry-based system; bookings finalized offline.</label>
+                        <label><input type="radio" name="booking_system" value="mixed"> (c) A mix: online booking for standard packages, inquiry for custom/complex tours.</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Payment Gateway: If accepting online payments, do you have a preferred provider?</h3>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="payment_gateway" value="yes" required> (a) Yes (please specify):
+                            <input type="text" name="payment_gateway_name" class="other-input">
+                        </label>
+                        <label><input type="radio" name="payment_gateway" value="need_guidance"> (b) No, we need guidance and recommendations.</label>
+                        <label><input type="radio" name="payment_gateway" value="not_applicable"> (c) Not applicable (if bookings are primarily offline).</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>User Ratings & Reviews System:</h3>
+                    <div class="options">
+                        <label><input type="radio" name="ratings_reviews" value="stars_and_reviews" required> (a) Yes, allow star ratings and written reviews.</label>
+                        <label><input type="radio" name="ratings_reviews" value="stars_only"> (b) Yes, allow star ratings only.</label>
+                        <label><input type="radio" name="ratings_reviews" value="not_priority"> (c) No, a rating/review system is not a priority for the initial launch.</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Who should be permitted to leave ratings/reviews?</h3>
+                    <div class="options">
+                        <label><input type="radio" name="who_can_review" value="verified_customers" required> (a) Only verified customers who have completed a tour booked via the website.</label>
+                        <label><input type="radio" name="who_can_review" value="registered_users"> (b) Any registered user (to potentially include offline bookings if they create an account).</label>
+                        <label><input type="radio" name="who_can_review" value="all_visitors"> (c) Open to all website visitors (generally not recommended).</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Tour Search & Filtering: How important are filters (e.g., by destination, price, duration, interest)?</h3>
+                    <div class="options">
+                        <label><input type="radio" name="search_filters" value="crucial" required> (a) Crucial – users must be able to easily filter tours.</label>
+                        <label><input type="radio" name="search_filters" value="important"> (b) Important – basic filtering options are sufficient.</label>
+                        <label><input type="radio" name="search_filters" value="less_important"> (c) Less important for the initial launch.</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Currency Display for Tour Prices:</h3>
+                    <div class="options">
+                        <label><input type="radio" name="currency_display" value="inr_only" required> (a) Display in INR only.</label>
+                        <label><input type="radio" name="currency_display" value="inr_with_conversion"> (b) Display in INR, with an option for users to see approximate conversions in major currencies.</label>
+                        <label><input type="radio" name="currency_display" value="multiple_currencies"> (c) Prominently display prices in multiple key currencies.</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Multilingual Website Support for Initial Launch:</h3>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="multilingual" value="essential" required> (a) Yes, essential (please list 1-2 priority languages besides English):
+                            <input type="text" name="multilingual_languages" class="other-input">
+                        </label>
+                        <label><input type="radio" name="multilingual" value="later_phase"> (b) Helpful, but can be implemented in a later phase.</label>
+                        <label><input type="radio" name="multilingual" value="not_required"> (c) Not required; English will be sufficient.</label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Section 4: Design, Branding & User Experience</h2>
+                
+                <div class="question">
+                    <h3>Logo for "Priyansh Tours": What is the status?</h3>
+                    <div class="options">
+                        <label><input type="radio" name="logo_status" value="ready" required> (a) We have a professional logo ready for use.</label>
+                        <label><input type="radio" name="logo_status" value="needs_update"> (b) We have a logo, but it might need some updates or a refresh.</label>
+                        <label><input type="radio" name="logo_status" value="need_design"> (c) We need a new logo to be designed for the website.</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Brand Colors & Style Guide:</h3>
+                    <div class="options">
+                        <label><input type="radio" name="brand_colors" value="defined_guide" required> (a) Yes, we have a defined brand style guide and color palette.</label>
+                        <label><input type="radio" name="brand_colors" value="preferred_colors"> (b) We have some preferred colors but no formal guide.</label>
+                        <label><input type="radio" name="brand_colors" value="need_assistance"> (c) No, we need assistance in developing the brand visuals.</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Desired Website Look and Feel:</h3>
+                    <div class="options">
+                        <label><input type="radio" name="look_and_feel" value="modern" required> (a) Modern, clean, and professional.</label>
+                        <label><input type="radio" name="look_and_feel" value="warm"> (b) Warm, inviting, and culturally rich.</label>
+                        <label><input type="radio" name="look_and_feel" value="elegant"> (c) Elegant, sophisticated, and high-end.</label>
+                        <label><input type="radio" name="look_and_feel" value="vibrant"> (d) Vibrant, adventurous, and engaging.</label>
+                        <label><input type="radio" name="look_and_feel" value="simple"> (e) Simple, trustworthy, and easy to navigate.</label>
+                        <label><input type="radio" name="look_and_feel" value="open"> (f) We are open to design suggestions.</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Competitor or Inspirational Websites: Are there any tourism websites you admire or dislike?</h3>
+                    <div class="options">
+                        <label><input type="radio" name="inspirational_sites" value="yes" required> (a) Yes, I can provide some examples and specific feedback.</label>
+                        <label><input type="radio" name="inspirational_sites" value="will_look"> (b) I will look for some examples to share.</label>
+                        <label><input type="radio" name="inspirational_sites" value="no_examples"> (c) No specific examples at this time.</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Mobile User Experience: How important is a flawless experience on smartphones and tablets?</h3>
+                    <div class="options">
+                        <label><input type="radio" name="mobile_experience" value="extremely_critical" required> (a) Extremely critical – a top priority for our users.</label>
+                        <label><input type="radio" name="mobile_experience" value="very_important"> (b) Very important.</label>
+                        <label><input type="radio" name="mobile_experience" value="important"> (c) Important, but we expect many users on desktop as well.</label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Section 5: Content (Information on the Website)</h2>
+                
+                <div class="question">
+                    <h3>Tour Content Creation (Descriptions, Itineraries, Photos, Videos): Who will be responsible?</h3>
+                    <div class="options">
+                        <label><input type="radio" name="content_creation" value="client" required> (a) We (client) will provide all necessary content, ready for web use.</label>
+                        <label><input type="radio" name="content_creation" value="client_with_assistance"> (b) We will provide basic information/drafts and require assistance with web-optimized writing and editing.</label>
+                        <label><input type="radio" name="content_creation" value="need_help"> (c) We need significant help in creating and sourcing tour content, including visuals.</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Visual Assets (Photography/Videography): What is the current status?</h3>
+                    <div class="options">
+                        <label><input type="radio" name="visual_assets" value="strong_collection" required> (a) We have a strong collection of high-quality, professional photos and videos.</label>
+                        <label><input type="radio" name="visual_assets" value="some_usable"> (b) We have some usable visuals but may need to enhance quality or quantity.</label>
+                        <label><input type="radio" name="visual_assets" value="limited"> (c) We have very limited visual assets and will likely need to source them.</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Blog / Travel Articles Section:</h3>
+                    <div class="options">
+                        <label><input type="radio" name="blog_section" value="from_launch" required> (a) Yes, we want to include a blog for travel tips, destination guides, etc., from launch.</label>
+                        <label><input type="radio" name="blog_section" value="later_phase"> (b) We are interested, but this can be considered for a later phase.</label>
+                        <label><input type="radio" name="blog_section" value="not_priority"> (c) This is not a priority feature for us.</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Essential Informational Pages (Besides Tours):</h3>
+                    <div class="options">
+                        <label><input type="checkbox" name="info_pages" value="about"> (a) About Priyansh Tours (Our Story, Mission, Team)</label>
+                        <label><input type="checkbox" name="info_pages" value="contact"> (b) Contact Us (Form, Phone, Email, Address/Map)</label>
+                        <label><input type="checkbox" name="info_pages" value="faq"> (c) Frequently Asked Questions (FAQ)</label>
+                        <label><input type="checkbox" name="info_pages" value="terms"> (d) Booking Terms & Conditions</label>
+                        <label><input type="checkbox" name="info_pages" value="privacy"> (e) Privacy Policy</label>
+                        <label><input type="checkbox" name="info_pages" value="testimonials"> (f) Customer Testimonials / Reviews Page</label>
+                        <label><input type="checkbox" name="info_pages" value="destination_guides"> (g) Destination Guides (if separate from blog)</label>
+                        <label>
+                            <input type="checkbox" name="info_pages" value="other"> (h) Other:
+                            <input type="text" name="info_pages_other" class="other-input">
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Section 6: Technical & Operational Aspects</h2>
+                
+                <div class="question">
+                    <h3>Website Platform: We typically recommend WordPress for its flexibility and user-friendly content management. Are you comfortable with this direction?</h3>
+                    <div class="options">
+                        <label><input type="radio" name="website_platform" value="yes" required> (a) Yes, WordPress sounds suitable.</label>
+                        <label>
+                            <input type="radio" name="website_platform" value="questions"> (b) I have some questions or would like to discuss alternatives:
+                            <input type="text" name="website_platform_questions" class="other-input">
+                        </label>
+                        <label><input type="radio" name="website_platform" value="open"> (c) I am open to your professional recommendation.</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Domain & Web Hosting: You have the domain priyanshtours.com. What is your web hosting plan?</h3>
+                    <div class="options">
+                        <label><input type="radio" name="hosting_plan" value="have_hosting" required> (a) We already have a suitable web hosting package.</label>
+                        <label><input type="radio" name="hosting_plan" value="need_recommendations"> (b) We need recommendations for a reliable hosting provider.</label>
+                        <label><input type="radio" name="hosting_plan" value="handle_setup"> (c) We would prefer you to handle the hosting setup and management.</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Post-Launch Content Management (Updating tours, text, images): How do you plan to handle this?</h3>
+                    <div class="options">
+                        <label><input type="radio" name="content_management" value="our_team" required> (a) Our team will manage content updates after receiving training.</label>
+                        <label><input type="radio" name="content_management" value="ongoing_support"> (b) We will require ongoing support for most content updates.</label>
+                        <label><input type="radio" name="content_management" value="combination"> (c) A combination: we'll handle some, and need support for more complex changes.</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Ongoing Technical Maintenance (WordPress updates, security, backups): What are your preferences?</h3>
+                    <div class="options">
+                        <label><input type="radio" name="technical_maintenance" value="manage_internally" required> (a) We have the capability to manage this internally.</label>
+                        <label><input type="radio" name="technical_maintenance" value="ongoing_service"> (b) We would prefer an ongoing maintenance and support service.</label>
+                        <label><input type="radio" name="technical_maintenance" value="need_more_info"> (c) We'd like to understand more about what's involved before deciding.</label>
+                    </div>
+                </div>
+            </section>
+
+            <div class="form-section form-footer">
+                <div class="button-container">
+                    <button type="submit" id="submitBtn">Submit Questionnaire</button>
+                </div>
+                <p class="thank-you">Thank you for completing this questionnaire! Your detailed input is crucial for the success of your new website.</p>
+            </div>
+        </form>
+    </div>
+
+    <div id="loadingOverlay" class="hidden">
+        <div class="spinner"></div>
+        <p>Submitting your response...</p>
+    </div>
+
+    <div id="successMessage" class="hidden">
+        <h2>Thank You!</h2>
+        <p>Your questionnaire has been submitted successfully.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
