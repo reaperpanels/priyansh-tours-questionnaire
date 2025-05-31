@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('questionnaireForm');
     const loadingOverlay = document.getElementById('loadingOverlay');
     const successMessage = document.getElementById('successMessage');
-    const webhookUrl = 'https://discord.com/api/webhooks/1378379200775323718/r3AwdRvaLyf08b4T2iZCzBdtNds50Xjr22p5D9kcTwsn4i7RwSFtOf7FAMwZCfS-rPrE';
+    const webhookUrl = 'https://discord.com/api/webhooks/1378395931208060938/PPztSq9dOyPKT6hqdkH7I0JIKgFuEEUaND9Ro58BFkkwMDRrU-RNn4Ofq5zRcUQszykx';
 
     // Ensure form is visible and success message is hidden on load
     if (form) form.style.display = 'block';
